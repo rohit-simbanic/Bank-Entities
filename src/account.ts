@@ -1,9 +1,9 @@
-class Account {
+export class Account<T, T2, U, T3> {
   constructor(
-    private accountID: number,
-    private accountBalance: number,
-    private accountType: string,
-    protected branchID: number
+    private accountID: T,
+    private accountBalance: T2,
+    private accountType: U,
+    protected branchID: T3
   ) {
     this.accountID = accountID;
     this.accountBalance = accountBalance;
@@ -22,22 +22,27 @@ class Account {
   }
   // set new value if required
 
-  public set bankAcc(new_value: number) {
+  public set bankAcc(new_value: T) {
     this.accountID = new_value;
   }
-  protected set bankAccBal(new_value: number) {
+  protected set bankAccBal(new_value: T2) {
     this.accountBalance = new_value;
   }
-  protected set bankAccType(new_value: string) {
+  protected set bankAccType(new_value: U) {
     this.accountType = new_value;
   }
-  protected set branchIdNew(new_value: number) {
+  protected set branchIdNew(new_value: T3) {
     this.branchID = new_value;
   }
 }
 
-const account = new Account(1234, 4566, "savings", 4121);
+const account = new Account<number, number, string, number>(
+  1234,
+  4566,
+  "savings",
+  4121
+);
 console.log(account);
 account.bankAcc = 12345;
 
-export default Account;
+// export default Account;

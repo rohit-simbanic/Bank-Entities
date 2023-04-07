@@ -1,9 +1,5 @@
-class Bank {
-  constructor(
-    private bankID: string,
-    private swiftCode: number,
-    public bankName: string
-  ) {}
+class Bank<T, U, T2> {
+  constructor(private bankID: T, private swiftCode: U, public bankName: T2) {}
   // get details
   private get bankDetails() {
     return {
@@ -14,17 +10,21 @@ class Bank {
   }
   // set new value if required
 
-  public set newBankName(new_value: string) {
+  public set newBankName(new_value: T2) {
     this.bankName = new_value;
   }
-  protected set newBankId(new_value: string) {
+  protected set newBankId(new_value: T) {
     this.bankID = new_value;
   }
-  protected set newSwiftCode(new_value: number) {
+  protected set newSwiftCode(new_value: U) {
     this.swiftCode = new_value;
   }
 }
 
-const bankDetails = new Bank("4222#kj", 43322, "NCC Bank of Ind");
+const bankDetails = new Bank<string, number, string>(
+  "#3ER",
+  43322,
+  "NCC Bank of Ind"
+);
 console.log(bankDetails);
 bankDetails.newBankName = "UCC bank OF INDIA";

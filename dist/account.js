@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Account = void 0;
 class Account {
     constructor(accountID, accountBalance, accountType, branchID) {
         this.accountID = accountID;
@@ -34,7 +35,8 @@ class Account {
         this.branchID = new_value;
     }
 }
+exports.Account = Account;
 const account = new Account(1234, 4566, "savings", 4121);
 console.log(account);
 account.bankAcc = 12345;
-exports.default = Account;
+// export default Account;

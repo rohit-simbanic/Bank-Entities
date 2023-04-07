@@ -22,6 +22,9 @@ class Loan {
         this.loanId = new_value;
     }
     set newIssuedAmnt(new_value) {
+        this.issuedAmnt = new_value;
+    }
+    set newRemainingAmount(new_value) {
         this.remainingAmount = new_value;
     }
     set newBranchID(new_value) {

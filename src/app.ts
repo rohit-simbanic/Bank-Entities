@@ -1,4 +1,4 @@
-import Account from "./account";
+import { Account } from "./account";
 
 const result = new Account(12345, 5000, "savings", 789);
 

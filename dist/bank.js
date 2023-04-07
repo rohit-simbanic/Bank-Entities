@@ -24,6 +24,6 @@ class Bank {
         this.swiftCode = new_value;
     }
 }
-const bankDetails = new Bank("4222#kj", 43322, "NCC Bank of Ind");
+const bankDetails = new Bank("#3ER", 43322, "NCC Bank of Ind");
 console.log(bankDetails);
 bankDetails.newBankName = "UCC bank OF INDIA";
