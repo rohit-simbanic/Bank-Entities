@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class Account {
     constructor(accountID, accountBalance, accountType, branchID) {
         this.accountID = accountID;
@@ -36,3 +37,4 @@ class Account {
 const account = new Account(1234, 4566, "savings", 4121);
 console.log(account);
 account.bankAcc = 12345;
+exports.default = Account;

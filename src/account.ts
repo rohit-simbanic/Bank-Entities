@@ -39,3 +39,5 @@ class Account {
 const account = new Account(1234, 4566, "savings", 4121);
 console.log(account);
 account.bankAcc = 12345;
+
+export default Account;

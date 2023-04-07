@@ -27,3 +27,4 @@ class Transaction {
 const transaction = new Transaction("afsdf@42298999492889", 4322, 400000);
 console.log(transaction);
 transaction.newTransactionID = "@ABBDSKK77655556666";
+// export default Transaction;
