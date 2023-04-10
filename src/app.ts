@@ -1,5 +1,5 @@
-import { Account } from "./account";
+import Account from "./account";
 
-const result = new Account(12345, 5000, "savings", 789);
+const result = new Account(12345, 6000, "savings", 789);
 
-console.log(result);
+console.log("Result: ", result);

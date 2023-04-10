@@ -1,4 +1,4 @@
-export class Account<T, T2, U, T3> {
+export default class Account<T, T2, U, T3> {
   constructor(
     private accountID: T,
     private accountBalance: T2,
