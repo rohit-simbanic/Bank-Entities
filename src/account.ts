@@ -12,13 +12,8 @@ class Account<T, T2, U, T3> {
   }
 
   // get details
-  private get bankAccDetails() {
-    return {
-      accountNo: this.accountID,
-      accountBalance: this.accountBalance,
-      accountType: this.accountType,
-      branchID: this.branchID,
-    };
+  public depositMoney() {
+    return this.accountBalance;
   }
   // set new value if required
 

@@ -12,13 +12,8 @@ class Account {
         this.branchID = branchID;
     }
     // get details
-    get bankAccDetails() {
-        return {
-            accountNo: this.accountID,
-            accountBalance: this.accountBalance,
-            accountType: this.accountType,
-            branchID: this.branchID,
-        };
+    depositMoney() {
+        return this.accountBalance;
     }
     // set new value if required
     set bankAcc(new_value) {
