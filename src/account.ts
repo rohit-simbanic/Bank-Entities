@@ -1,9 +1,9 @@
 class Account<T, T2, U, T3> {
   constructor(
     public accountID: T,
-    public accountBalance: T2,
+    public accountBalance: number,
     private accountType: U,
-    protected branchID: T3
+    public branchID: T3
   ) {
     this.accountID = accountID;
     this.accountBalance = accountBalance;
@@ -14,7 +14,6 @@ class Account<T, T2, U, T3> {
   // get details
   public depositMoney(money: number) {
     this.accountBalance += money;
-    console.log(this.accountBalance);
   }
 }
 

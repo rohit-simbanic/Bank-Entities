@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class CreditCard {
     constructor(creditCardId, expiry, cardLimit, accountId, customerID) {
         this.creditCardId = creditCardId;
@@ -23,22 +24,9 @@ class CreditCard {
         };
     }
     // set new value if required
-    set newCardId(new_value) {
-        this.creditCardId = new_value;
-    }
-    set newExpiry(new_value) {
-        this.expiry = new_value;
-    }
-    set newCardLimit(new_value) {
-        this.cardLimit = new_value;
-    }
-    set newAccountID(new_value) {
-        this.accountId = new_value;
-    }
-    set newCustomerId(new_value) {
-        this.customerID = new_value;
+    purchaseUsingCard(amount) {
+        return (this.cardLimit -= amount);
     }
 }
 const card = new CreditCard(12, new Date(), 500000, 12345, 23);
-console.log(card);
-card.newCardId = 90;
+exports.default = CreditCard;

@@ -2,7 +2,7 @@ class CreditCard<T, U, T2, T3, T4> {
   constructor(
     private creditCardId: T,
     private expiry: U,
-    private cardLimit: T2,
+    private cardLimit: number,
     private accountId: T3,
     private customerID: T4
   ) {
@@ -25,20 +25,8 @@ class CreditCard<T, U, T2, T3, T4> {
 
   // set new value if required
 
-  public set newCardId(new_value: T) {
-    this.creditCardId = new_value;
-  }
-  protected set newExpiry(new_value: U) {
-    this.expiry = new_value;
-  }
-  protected set newCardLimit(new_value: T2) {
-    this.cardLimit = new_value;
-  }
-  protected set newAccountID(new_value: T3) {
-    this.accountId = new_value;
-  }
-  protected set newCustomerId(new_value: T4) {
-    this.customerID = new_value;
+  public purchaseUsingCard(amount: number) {
+    return (this.cardLimit -= amount);
   }
 }
 
@@ -49,5 +37,5 @@ const card = new CreditCard<number, Date, number, number, number>(
   12345,
   23
 );
-console.log(card);
-card.newCardId = 90;
+
+export default CreditCard;
