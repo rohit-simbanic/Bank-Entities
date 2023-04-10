@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class Bank {
     constructor(bankID, swiftCode, bankName) {
         this.bankID = bankID;
@@ -27,3 +28,4 @@ class Bank {
 const bankDetails = new Bank("#3ER", 43322, "NCC Bank of Ind");
 console.log(bankDetails);
 bankDetails.newBankName = "UCC bank OF INDIA";
+exports.default = Bank;

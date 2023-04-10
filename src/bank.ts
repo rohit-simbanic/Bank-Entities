@@ -1,5 +1,5 @@
 class Bank<T, U, T2> {
-  constructor(private bankID: T, private swiftCode: U, public bankName: T2) {}
+  constructor(public bankID: T, private swiftCode: U, public bankName: T2) {}
   // get details
   private get bankDetails() {
     return {
@@ -28,3 +28,5 @@ const bankDetails = new Bank<string, number, string>(
 );
 console.log(bankDetails);
 bankDetails.newBankName = "UCC bank OF INDIA";
+
+export default Bank;
