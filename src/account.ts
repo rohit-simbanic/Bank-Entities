@@ -13,7 +13,8 @@ class Account<T, T2, U, T3> {
 
   // get details
   public depositMoney(money: number) {
-    return (this.accountBalance += money);
+    this.accountBalance += money;
+    console.log(this.accountBalance);
   }
   // set new value if required
 

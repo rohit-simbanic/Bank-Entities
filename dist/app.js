@@ -7,6 +7,6 @@ const account_1 = __importDefault(require("./account"));
 const transaction_1 = __importDefault(require("./transaction"));
 const result = new account_1.default(1234, 7000, "savings", 789);
 console.log("Result: ", result);
-console.log("Total Balance Now:", result.depositMoney(3000));
+result.depositMoney(6000);
 const transaction = new transaction_1.default(1, result.accountID, result.accountBalance);
 console.log(transaction);

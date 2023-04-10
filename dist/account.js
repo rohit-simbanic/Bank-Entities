@@ -13,7 +13,8 @@ class Account {
     }
     // get details
     depositMoney(money) {
-        return (this.accountBalance += money);
+        this.accountBalance += money;
+        console.log(this.accountBalance);
     }
 }
 const account = new Account(1234, 4566, "savings", 4121);
