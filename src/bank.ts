@@ -9,16 +9,6 @@ class Bank<T, U, T2> {
     };
   }
   // set new value if required
-
-  public set newBankName(new_value: T2) {
-    this.bankName = new_value;
-  }
-  protected set newBankId(new_value: T) {
-    this.bankID = new_value;
-  }
-  protected set newSwiftCode(new_value: U) {
-    this.swiftCode = new_value;
-  }
 }
 
 const bankDetails = new Bank<string, number, string>(
@@ -26,7 +16,6 @@ const bankDetails = new Bank<string, number, string>(
   43322,
   "NCC Bank of Ind"
 );
-console.log(bankDetails);
-bankDetails.newBankName = "UCC bank OF INDIA";
+// console.log(bankDetails);
 
 export default Bank;

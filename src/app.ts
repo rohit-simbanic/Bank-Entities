@@ -34,6 +34,20 @@ card.purchaseUsingCard(1000);
 
 console.log(card);
 
+// don't allow to change property
+Object.freeze(card);
+// check frozen or not
+console.log(Object.isFrozen(card));
+// turn into array of array items from object
+console.log(Object.entries(card));
+
+// get property name from an object
+console.log(Object.getOwnPropertyNames(card));
+// get only key property from an array in the form of array
+console.log(Object.keys(card));
+// get only value property from an array in the form of array
+console.log(Object.values(card));
+
 // Loan section
 
 const loan = new Loan(1, 10000, 3000000, result.branchID, result.accountID);
